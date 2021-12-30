@@ -37,3 +37,7 @@ virtualenv -p $(which python3) /pyenv/python3
 pip install git+https://github.com/Tib3rius/AutoRecon.git
 pip install impacket
 deactivate
+
+# install vscode extensions
+code-oss --install-extension vscodevim.vim
+code-oss --install-extension ms-python.python
