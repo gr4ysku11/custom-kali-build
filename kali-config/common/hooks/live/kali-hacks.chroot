@@ -38,6 +38,9 @@ pip install git+https://github.com/Tib3rius/AutoRecon.git
 pip install impacket
 deactivate
 
+# change default shell to bash
+sed -i 's/zsh/bash/g' /etc/passwd
+
 # install vscode extensions
 # this breaks the build...have to install manually for now
 #code-oss --install-extension vscodevim.vim
