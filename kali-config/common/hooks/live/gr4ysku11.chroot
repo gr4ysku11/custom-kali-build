@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# setup python2 virtualenv
+virtualenv -p $(which python3) /pyenv/python3
+. /pyenv/python3/bin/activate
+pip install impacket
+
+# install autorecon
+pip install git+https://github.com/Tib3rius/AutoRecon.git
+deactivate
+
+# setup python2 virtualenv
+virtualenv -p $(which python2) /pyenv/python2
+. /pyenv/python2/bin/activate
+pip install impacket
+deactivate
+
