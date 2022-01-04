@@ -18,6 +18,7 @@ kali-desktop-kde
 # Kali applications
 code-oss
 chromium
+firefox-esr
 virtualenv
 bloodhound
 seclists
