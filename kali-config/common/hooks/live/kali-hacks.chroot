@@ -39,5 +39,6 @@ pip install impacket
 deactivate
 
 # install vscode extensions
-code-oss --install-extension vscodevim.vim
-code-oss --install-extension ms-python.python
+# this breaks the build...have to install manually for now
+#code-oss --install-extension vscodevim.vim
+#code-oss --install-extension ms-python.python
