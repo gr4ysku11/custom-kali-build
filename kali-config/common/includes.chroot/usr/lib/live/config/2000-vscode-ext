@@ -1,5 +1,0 @@
-#!/bin/sh
-
-su kali
-code-oss --install-extension vscodevim.vim
-code-oss --install-extension ms-python.python

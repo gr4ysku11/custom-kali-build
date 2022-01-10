@@ -1,9 +1,10 @@
 #!/bin/sh
 
-# setup python2 virtualenv
+# setup python3 virtualenv
 virtualenv -p $(which python3) /pyenv/python3
 . /pyenv/python3/bin/activate
 pip install impacket
+pip install sshuttle
 
 # install autorecon
 pip install git+https://github.com/Tib3rius/AutoRecon.git
