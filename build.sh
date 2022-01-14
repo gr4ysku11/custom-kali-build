@@ -68,16 +68,24 @@ sed -i 's/configure_zsh$/#configure_zsh/' kali-config/common/includes.chroot/usr
 # install vscodium instead
 extrepo enable vscodium
 apt update
-apt install codium
+apt install -y codium
 
-cat > kali-config/common/includes.chroot/usr/share/gr4ysku11.sh << EOF
+# copy favorites/task manager config
+mkdir -p kali-config/common/includes.chroot/usr/share/gr4ysku11
+cp ../../kali-gr4ysku11-custom/plasma-org.kde.plasma.desktop-appletsrc kali-config/common/includes.chroot/usr/share/gr4ysku11
+chown kali:kali kali-config/common/includes.chroot/usr/share/gr4ysku11/plasma-org.kde.plasma.desktop-appletsrc
+
+cat > kali-config/common/includes.chroot/usr/share/gr4ysku11/post-install.sh << EOF
 #!/bin/bash
+
+# run this script as kali user, after live boot
 
 # install vscode extensions
 codium --install-extension vscodevim.vim
 codium --install-extension ms-python.python
 
 # copy config file for favorites and task manager
+cp plasma-org.kde.plasma.desktop-appletsrc ~/.config/
 EOF
 
 ./build.sh --variant kde --verbose
