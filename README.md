@@ -14,7 +14,7 @@ sudo ./kali-gr4ysku11-custom/build.sh
 ### Installed packages
 ```bash
 # my commonly used packages
-code-oss
+code-oss    # requires additional setup for installing extensions
 git
 keepassxc
 chromium
