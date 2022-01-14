@@ -56,6 +56,12 @@ virtualenv -p $(which python2) /pyenv/python2
 . /pyenv/python2/bin/activate
 pip install impacket
 deactivate
+
+# code-oss currently has a bug that won't allow installing extensions from command line
+# install vscodium instead
+extrepo enable vscodium
+apt update
+apt install -y codium
 EOF
 
 chmod +x kali-config/common/hooks/live/gr4ysku11.chroot
@@ -64,17 +70,12 @@ chmod +x kali-config/common/hooks/live/gr4ysku11.chroot
 # is there a better way to do this (LIVE_BUILD_CMD_LINE)?
 sed -i 's/configure_zsh$/#configure_zsh/' kali-config/common/includes.chroot/usr/lib/live/config/0031-kali-user-setup
 
-# code-oss currently has a bug that won't allow installing extensions from command line
-# install vscodium instead
-extrepo enable vscodium
-apt update
-apt install -y codium
-
 # copy favorites/task manager config
 mkdir -p kali-config/common/includes.chroot/usr/share/gr4ysku11
 cp ../../kali-gr4ysku11-custom/plasma-org.kde.plasma.desktop-appletsrc kali-config/common/includes.chroot/usr/share/gr4ysku11
 chown kali:kali kali-config/common/includes.chroot/usr/share/gr4ysku11/plasma-org.kde.plasma.desktop-appletsrc
 
+# create post-install script and include it in chroot
 cat > kali-config/common/includes.chroot/usr/share/gr4ysku11/post-install.sh << EOF
 #!/bin/bash
 
