@@ -13,6 +13,7 @@ sudo ./kali-gr4ysku11-custom/build.sh
 
 ### Installed packages
 ```bash
+# my commonly used packages
 code-oss
 git
 keepassxc
@@ -20,6 +21,8 @@ chromium
 firefox-esr
 virtualenv
 bloodhound
+
+# autorecon packages
 seclists
 curl
 enum4linux
@@ -40,6 +43,7 @@ tnscmd10g
 whatweb
 wkhtmltopdf
 ```
+
 ### Custom Hooks For
 - python virtualenv's for both python 2 and 3
   - autorecon (python3)
