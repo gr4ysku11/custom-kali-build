@@ -9,7 +9,7 @@ cd live-build-config
 
 # add packages
 cat >> kali-config/variant-kde/package-lists/kali.list.chroot << EOF
-code-oss
+extrepo
 git
 keepassxc
 chromium
@@ -64,4 +64,21 @@ chmod +x kali-config/common/hooks/live/gr4ysku11.chroot
 # is there a better way to do this (LIVE_BUILD_CMD_LINE)?
 sed -i 's/configure_zsh$/#configure_zsh/' kali-config/common/includes.chroot/usr/lib/live/config/0031-kali-user-setup
 
+# code-oss currently has a bug that won't allow installing extensions from command line
+# install vscodium instead
+extrepo enable vscodium
+apt update
+apt install codium
+
+cat > kali-config/common/includes.chroot/usr/share/gr4ysku11.sh << EOF
+#!/bin/bash
+
+# install vscode extensions
+codium --install-extension vscodevim.vim
+codium --install-extension ms-python.python
+
+# copy config file for favorites and task manager
+EOF
+
 ./build.sh --variant kde --verbose
+
