@@ -10,6 +10,7 @@ cd live-build-config
 # add packages
 cat > kali-config/variant-kde/package-lists << EOF
 code-oss
+git
 chromium
 firefox-esr
 virtualenv
@@ -33,7 +34,6 @@ sipvicious
 tnscmd10g
 whatweb
 wkhtmltopdf
-git
 EOF
 
 # create hook for python 2/3 virtual environments
