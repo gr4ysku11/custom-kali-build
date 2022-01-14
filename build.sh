@@ -8,7 +8,7 @@ git clone https://gitlab.com/kalilinux/build-scripts/live-build-config.git
 cd live-build-config
 
 # add packages
-cat > kali-config/variant-kde/package-lists/kali.list.chroot << EOF
+cat >> kali-config/variant-kde/package-lists/kali.list.chroot << EOF
 code-oss
 git
 chromium
