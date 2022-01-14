@@ -72,7 +72,7 @@ sed -i 's/configure_zsh$/#configure_zsh/' kali-config/common/includes.chroot/usr
 
 # copy favorites/task manager config
 mkdir -p kali-config/common/includes.chroot/usr/share/gr4ysku11
-cp ../../kali-gr4ysku11-custom/plasma-org.kde.plasma.desktop-appletsrc kali-config/common/includes.chroot/usr/share/gr4ysku11
+cp ../kali-gr4ysku11-custom/plasma-org.kde.plasma.desktop-appletsrc kali-config/common/includes.chroot/usr/share/gr4ysku11
 chown kali:kali kali-config/common/includes.chroot/usr/share/gr4ysku11/plasma-org.kde.plasma.desktop-appletsrc
 
 # create post-install script and include it in chroot
