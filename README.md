@@ -6,10 +6,16 @@ git clone https://github.com/gr4ysku11/kali-gr4ysku11-custom.git
 sudo ./kali-gr4ysku11-custom/build.sh
 ```
 
+### Features
+- pre installed packages that I most commonly use
+- python virtual environments
+- disable zsh in favor of good ol' bash
+
 ### Installed packages
 ```bash
 code-oss
 git
+keepassxc
 chromium
 firefox-esr
 virtualenv
