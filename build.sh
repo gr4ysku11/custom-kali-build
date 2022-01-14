@@ -11,6 +11,7 @@ cd live-build-config
 cat >> kali-config/variant-kde/package-lists/kali.list.chroot << EOF
 code-oss
 git
+keepassxc
 chromium
 firefox-esr
 virtualenv
