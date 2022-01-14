@@ -36,9 +36,6 @@ virtual python environments are located in /pyenv/python\* directories
   
   ### Build
 ```bash
-git clone https://gitlab.com/kalilinux/build-scripts/live-build-config.git
-git clone https://github.com/gr4ysku11/custom-kali-build.git
-cp -r custom-kali-build/* live-build-config
-cd live-build-config
-./build.sh --variant kde --verbose
+git clone https://github.com/gr4ysku11/kali-gr4ysku11-custom.git
+./kali-gr4ysku11-custom/build.sh
 ```
