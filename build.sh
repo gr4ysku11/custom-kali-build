@@ -37,7 +37,7 @@ wkhtmltopdf
 EOF
 
 # create hook for python 2/3 virtual environments
-cat > kali-config/common/hooks/live/kali-gr4ysku11.chroot << EOF
+cat > kali-config/common/hooks/live/gr4ysku11.chroot << EOF
 #!/bin/bash
 
 # setup python3 virtualenv
@@ -57,7 +57,7 @@ pip install impacket
 deactivate
 EOF
 
-chmod +x kali-config/common/hooks/live/kali-gr4ysku11.chroot
+chmod +x kali-config/common/hooks/live/gr4ysku11.chroot
 
 # disable zsh configuration
 # is there a better way to do this (LIVE_BUILD_CMD_LINE)?
