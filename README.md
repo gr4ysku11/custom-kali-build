@@ -3,7 +3,7 @@
   ### Installation
 ```bash
 git clone https://github.com/gr4ysku11/kali-gr4ysku11-custom.git
-./kali-gr4ysku11-custom/build.sh
+sudo ./kali-gr4ysku11-custom/build.sh
 ```
 
 ### Installed packages
