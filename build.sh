@@ -37,6 +37,27 @@ whatweb
 wkhtmltopdf
 EOF
 
+# copy favorites/task manager config
+mkdir -p kali-config/common/includes.chroot/usr/share/gr4ysku11
+cp ../kali-gr4ysku11-custom/plasma-org.kde.plasma.desktop-appletsrc kali-config/common/includes.chroot/usr/share/gr4ysku11
+
+# not needed?
+#chown kali:kali kali-config/common/includes.chroot/usr/share/gr4ysku11/plasma-org.kde.plasma.desktop-appletsrc
+
+# create post-install script and include it in chroot
+cat > kali-config/common/includes.chroot/usr/share/gr4ysku11/post-install.sh << EOF
+#!/bin/bash
+
+# run this script as kali user, after live boot
+
+# install vscode extensions
+codium --install-extension vscodevim.vim
+codium --install-extension ms-python.python
+
+# copy config file for favorites and task manager
+cp plasma-org.kde.plasma.desktop-appletsrc ~/.config/
+EOF
+
 # create hook for python 2/3 virtual environments
 cat > kali-config/common/hooks/live/gr4ysku11.chroot << EOF
 #!/bin/bash
@@ -62,6 +83,9 @@ deactivate
 extrepo enable vscodium
 apt update
 apt install -y codium
+
+chmod +x /usr/share/gr4ysku11/post-install.sh
+chown kali:kali /usr/share/gr4ysku11/post-install.sh
 EOF
 
 chmod +x kali-config/common/hooks/live/gr4ysku11.chroot
@@ -69,25 +93,6 @@ chmod +x kali-config/common/hooks/live/gr4ysku11.chroot
 # disable zsh configuration
 # is there a better way to do this (LIVE_BUILD_CMD_LINE)?
 sed -i 's/configure_zsh$/#configure_zsh/' kali-config/common/includes.chroot/usr/lib/live/config/0031-kali-user-setup
-
-# copy favorites/task manager config
-mkdir -p kali-config/common/includes.chroot/usr/share/gr4ysku11
-cp ../kali-gr4ysku11-custom/plasma-org.kde.plasma.desktop-appletsrc kali-config/common/includes.chroot/usr/share/gr4ysku11
-chown kali:kali kali-config/common/includes.chroot/usr/share/gr4ysku11/plasma-org.kde.plasma.desktop-appletsrc
-
-# create post-install script and include it in chroot
-cat > kali-config/common/includes.chroot/usr/share/gr4ysku11/post-install.sh << EOF
-#!/bin/bash
-
-# run this script as kali user, after live boot
-
-# install vscode extensions
-codium --install-extension vscodevim.vim
-codium --install-extension ms-python.python
-
-# copy config file for favorites and task manager
-cp plasma-org.kde.plasma.desktop-appletsrc ~/.config/
-EOF
 
 ./build.sh --variant kde --verbose
 
