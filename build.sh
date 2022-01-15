@@ -37,9 +37,10 @@ whatweb
 wkhtmltopdf
 EOF
 
-# copy favorites/task manager config
+# copy favorites, task manager config/database files into chroot includes
 mkdir -p kali-config/common/includes.chroot/usr/share/gr4ysku11
 cp ../kali-gr4ysku11-custom/plasma-org.kde.plasma.desktop-appletsrc kali-config/common/includes.chroot/usr/share/gr4ysku11
+cp ../kali-gr4ysku11-custom/database* kali-config/common/includes.chroot/usr/share/gr4ysku11
 
 # not needed?
 #chown kali:kali kali-config/common/includes.chroot/usr/share/gr4ysku11/plasma-org.kde.plasma.desktop-appletsrc
@@ -54,8 +55,9 @@ cat > kali-config/common/includes.chroot/usr/share/gr4ysku11/post-install.sh << 
 codium --install-extension vscodevim.vim
 codium --install-extension ms-python.python
 
-# copy config file for favorites and task manager
-cp plasma-org.kde.plasma.desktop-appletsrc ~/.config/
+# copy config/database files for favorites and task manager
+cp /usr/share/gr4ysku11/database* ~/.local/share/kapplicationmanagerd/resources/
+cp /usr/share/gr4ysku11/plasma-org.kde.plasma.desktop-appletsrc ~/.config/
 
 # logout to reload plasma workspace
 qdbus org.kde.ksmserver /KSMServer logout 0 3 3
