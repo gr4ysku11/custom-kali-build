@@ -56,6 +56,9 @@ codium --install-extension ms-python.python
 
 # copy config file for favorites and task manager
 cp plasma-org.kde.plasma.desktop-appletsrc ~/.config/
+
+# logout to reload plasma workspace
+qdbus org.kde.ksmserver /KSMServer logout 0 3 3
 EOF
 
 # create hook for python 2/3 virtual environments
