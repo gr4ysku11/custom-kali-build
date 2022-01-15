@@ -87,7 +87,6 @@ extrepo enable vscodium
 apt update
 apt install -y codium
 EOF
-
 chmod +x kali-config/common/hooks/live/gr4ysku11.chroot
 
 # set ownership for post-install script, after 'kali' user creation
@@ -95,6 +94,7 @@ cat > kali-config/common/includes.chroot/usr/lib/live/config/9990-gr4ysku11 << E
 chmod +x /usr/share/gr4ysku11/post-install.sh
 chown kali:kali /usr/share/gr4ysku11/post-install.sh
 EOF
+chmod +x kali-config/common/includes.chroot/usr/lib/live/config/9990-gr4ysku11
 
 # disable zsh configuration
 # is there a better way to do this (LIVE_BUILD_CMD_LINE)?
