@@ -41,6 +41,7 @@ EOF
 mkdir -p kali-config/common/includes.chroot/usr/share/gr4ysku11
 cp ../kali-gr4ysku11-custom/plasma-org.kde.plasma.desktop-appletsrc kali-config/common/includes.chroot/usr/share/gr4ysku11
 cp ../kali-gr4ysku11-custom/database* kali-config/common/includes.chroot/usr/share/gr4ysku11
+cp ../kali-gr4ysku11-custom/kactivitymanagerd-statsrc kali-config/common/includes.chroot/usr/share/gr4ysku11
 
 # not needed?
 #chown kali:kali kali-config/common/includes.chroot/usr/share/gr4ysku11/plasma-org.kde.plasma.desktop-appletsrc
@@ -57,6 +58,7 @@ codium --install-extension ms-python.python
 
 # copy config/database files for favorites and task manager
 cp /usr/share/gr4ysku11/database* ~/.local/share/kapplicationmanagerd/resources/
+cp /usr/share/gr4ysku11/kactivitymanagerd-statsrc ~/.config
 cp /usr/share/gr4ysku11/plasma-org.kde.plasma.desktop-appletsrc ~/.config/
 
 # logout to reload plasma workspace
