@@ -4,12 +4,16 @@
 ```bash
 git clone https://github.com/gr4ysku11/kali-gr4ysku11-custom.git
 sudo ./kali-gr4ysku11-custom/build.sh
+
+# once live boot is loaded, run the post install script and log back in:
+/usr/share/gr4ysku11/post-install.sh
 ```
 
 ### Features
 - pre installed packages that I most commonly use
 - python virtual environments
 - disable zsh in favor of good ol' bash
+- custom application menu favorites and task manager icons
 
 ### Installed packages
 ```bash
