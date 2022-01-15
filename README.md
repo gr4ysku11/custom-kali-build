@@ -5,7 +5,7 @@
 git clone https://github.com/gr4ysku11/kali-gr4ysku11-custom.git
 sudo ./kali-gr4ysku11-custom/build.sh
 
-# once live boot is loaded, run the post install script and log back in:
+# once booted into the live image, run the post install script and log back in:
 /usr/share/gr4ysku11/post-install.sh
 ```
 
