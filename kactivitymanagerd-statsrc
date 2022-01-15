@@ -1,0 +1,5 @@
+[Favorites-org.kde.plasma.kickoff.favorites.instance-3-559af947-7c38-40ea-b06c-2295d054351e]
+ordering=applications:org.kde.konsole.desktop,applications:org.kde.dolphin.desktop,applications:chromium.desktop,applications:firefox-esr.desktop,applications:codium.desktop
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-3-global]
+ordering=applications:org.kde.konsole.desktop,applications:org.kde.dolphin.desktop,applications:chromium.desktop,applications:firefox-esr.desktop,applications:codium.desktop
