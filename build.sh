@@ -59,7 +59,7 @@ cp /usr/share/gr4ysku11/kactivitymanagerd-statsrc ~/.config
 cp /usr/share/gr4ysku11/plasma-org.kde.plasma.desktop-appletsrc ~/.config/
 
 # logout to reload plasma workspace
-#qdbus org.kde.ksmserver /KSMServer logout 0 3 3
+qdbus org.kde.ksmserver /KSMServer logout 0 3 3
 EOF
 
 # create hook for python 2/3 virtual environments
