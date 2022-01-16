@@ -39,7 +39,7 @@ EOF
 
 # copy favorites, task manager config/database files into chroot includes
 mkdir -p kali-config/common/includes.chroot/usr/share/gr4ysku11
-cp ../kali-gr4ysku11-custom/database* kali-config/common/includes.chroot/usr/share/gr4yskull
+cp ../kali-gr4ysku11-custom/database* kali-config/common/includes.chroot/usr/share/gr4ysku11
 cp ../kali-gr4ysku11-custom/plasma-org.kde.plasma.desktop-appletsrc kali-config/common/includes.chroot/usr/share/gr4ysku11
 cp ../kali-gr4ysku11-custom/kactivitymanagerd-statsrc kali-config/common/includes.chroot/usr/share/gr4ysku11
 
