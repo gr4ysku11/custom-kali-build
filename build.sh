@@ -54,7 +54,7 @@ codium --install-extension vscodevim.vim
 codium --install-extension ms-python.python
 
 # copy config/database files for favorites and task manager
-cp /usr/share/gr4ysku11/database* ~/.local/share/kapplicationmanagerd/resources/
+cp /usr/share/gr4ysku11/database* ~/.local/share/kactivitymanagerd/resources/
 cp /usr/share/gr4ysku11/kactivitymanagerd-statsrc ~/.config
 cp /usr/share/gr4ysku11/plasma-org.kde.plasma.desktop-appletsrc ~/.config/
 
