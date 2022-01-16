@@ -50,14 +50,20 @@ cat > kali-config/common/includes.chroot/usr/share/gr4ysku11/post-install.sh << 
 # run this script as kali user, after live boot
 
 # install vscode extensions
-codium --install-extension vscodevim.vim
-codium --install-extension ms-python.python
+echo "installing vscodium extensions..."
+codium --install-extension vscodevim.vim > /dev/null 2>&1
+codium --install-extension ms-python.python > /dev/null 2>&1
 
+echo "copying kde config files..."
 # copy config/database files for favorites and task manager
 cp /usr/share/gr4ysku11/database* ~/.local/share/kactivitymanagerd/resources/
 cp /usr/share/gr4ysku11/kactivitymanagerd-statsrc ~/.config
 cp /usr/share/gr4ysku11/plasma-org.kde.plasma.desktop-appletsrc ~/.config/
 
+# change default password
+passwd
+
+echo "logging out..."
 # logout to reload plasma workspace
 qdbus org.kde.ksmserver /KSMServer logout 0 3 3
 EOF
