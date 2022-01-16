@@ -35,6 +35,7 @@ sipvicious
 tnscmd10g
 whatweb
 wkhtmltopdf
+gobuster
 EOF
 
 # copy favorites, task manager config/database files into chroot includes
