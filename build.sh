@@ -54,6 +54,7 @@ cat > kali-config/common/includes.chroot/usr/share/gr4ysku11/post-install.sh << 
 echo "installing vscodium extensions..."
 codium --install-extension vscodevim.vim > /dev/null 2>&1
 codium --install-extension ms-python.python > /dev/null 2>&1
+codium --install-extension dendron.dendron-paste-image > /dev/null 2>&1
 
 echo "copying kde config files..."
 # copy config/database files for favorites and task manager
