@@ -16,6 +16,7 @@ chromium
 firefox-esr
 virtualenv
 bloodhound
+xclip
 seclists
 curl
 enum4linux
