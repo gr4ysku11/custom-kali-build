@@ -11,7 +11,7 @@ git clone https://gitlab.com/kalilinux/build-scripts/live-build-config.git
 git clone https://github.com/gr4ysku11/kali-gr4ysku11-custom.git
 sudo ./kali-gr4ysku11-custom/build.sh
 [...]
-# once the build completes, boot into the newly create live iso
+# once the build completes, boot into the newly created live iso
 [...]
 # once booted, run the post install script and log back in
 /usr/share/gr4ysku11/post-install.sh
