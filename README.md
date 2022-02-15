@@ -2,10 +2,18 @@
 
   ### Installation
 ```bash
+# first set up the standard custom kali build environment
+sudo apt update
+sudo apt install -y git live-build cdebootstrap devscripts
+git clone https://gitlab.com/kalilinux/build-scripts/live-build-config.git
+
+# then set up custom install scripts and run the build
 git clone https://github.com/gr4ysku11/kali-gr4ysku11-custom.git
 sudo ./kali-gr4ysku11-custom/build.sh
-
-# once booted into the live image, run the post install script and log back in:
+[...]
+# once the build completes, boot into the newly create live iso
+[...]
+# once booted, run the post install script and log back in
 /usr/share/gr4ysku11/post-install.sh
 ```
 
